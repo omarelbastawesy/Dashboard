@@ -39,25 +39,25 @@ export default function Signup({ onSwitch }) {
       <Alert
         alert={alert}
         setAlert={setAlert}
-        onSwitch={onSwitch}
+        onSwitch={setAlert}
         x={faX}
         icon={faX}
         color="text-red-500"
-        title="Authentication Error"
-        message="User already exists or invalid credentials."
-        buttonText="Sign Up"
+        title="Error"
+        message="Your email or password is incorrect."
+        buttonText="Try Again"
       />
 
       <Alert
         alert={success}
         setAlert={setSuccess}
-        onSwitch={onSwitch}
+        onSwitch={() => window.location.reload()}
         x={faX}
         icon={faCheck}
         color="text-green-500"
-        title="Authentication Success"
-        message="User registered successfully."
-        buttonText="Sign Up"
+        title="Success"
+        message="You Logged In Successfully"
+        buttonText="Dashboard"
       />
       <div className="flex flex-col items-center justify-between gap-6 container w-full max-w-md bg-[var(--bg-card)] rounded-xl shadow-[var(--shadow-md)] p-8 border border-[var(--border-color)] animate-fade-in">
         <div className="heading text-2xl font-bold text-[var(--text-primary)] mb-6 text-center">
