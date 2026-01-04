@@ -1,0 +1,109 @@
+{
+  "header": {
+    "about": "À propos",
+    "skill": "Compétences",
+    "project": "Projets",
+    "contact": "Contact"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Omar Elbastawsy",
+    "title": "Développeur Web Frontend",
+    "dis": "Développeur Frontend spécialisé en React.js et Next.js, créant des applications web modernes, responsives et conviviales.",
+    "dcv": "Télécharger CV",
+    "vcv": "Voir le CV"
+  },
+  "about": {
+    "head": "Je suis la personne que vous recherchez.",
+    "summary": {
+      "header": "Résumé",
+      "info": "Développeur Web Frontend spécialisé dans la création d'applications web modernes, responsives et conviviales. Maîtrise de HTML5, CSS3, JavaScript (ES6+), et React.js, avec une solide expertise des outils de stylisation tels que Sass, Bootstrap et Styled Components. Capable de transformer des designs UI/UX en composants propres, optimisés et réutilisables tout en garantissant de hautes performances sur tous les appareils. Passionné par la création d'expériences utilisateur fluides, l'écriture de code propre et maintenable, et l'apprentissage continu de nouvelles technologies pour rester aligné avec les tendances du secteur."
+    },
+    "experiance": {
+      "header": "Expérience",
+      "stepA": {
+        "name": "Web Development Challenger",
+        "date": "01/05/2022",
+        "dis": "👉 Programme fondamental couvrant HTML, CSS, JavaScript et Git, axé sur la création de projets web responsives et interactifs."
+      },
+      "stepB": {
+        "name": "Responsive Web Design",
+        "date": "23/06/2022",
+        "dis": "👉 Cours FreeCodeCamp enseignant la création de sites web responsives à l’aide de HTML, CSS, Flexbox et des media queries pour toutes les tailles d’écran."
+      },
+      "stepC": {
+        "name": "Apprendre PHP pour débutants",
+        "date": "04/07/2023",
+        "dis": "👉 Cours d’introduction sur Udemy expliquant comment créer des applications web dynamiques avec PHP en couvrant les concepts fondamentaux et les bases de la programmation."
+      },
+      "stepD": {
+        "name": "Algorithmes JavaScript",
+        "date": "16/08/2023",
+        "dis": "👉 Cours complet FreeCodeCamp enseignant les concepts clés de JavaScript à travers des algorithmes pratiques et des défis sur les structures de données."
+      }
+    },
+    "overview": {
+      "name": "Aperçu",
+      "cardA": {
+        "value": "20",
+        "name": "Projets"
+      },
+      "cardB": {
+        "value": "4",
+        "name": "😊 Clients"
+      },
+      "cardC": {
+        "value": "10",
+        "name": "Technologies"
+      },
+      "cardD": {
+        "value": "5",
+        "name": "Emplois"
+      }
+    }
+  },
+  "contact": {
+    "head": "Je suis toujours ouvert à discuter de nouveaux projets, d’idées créatives ou d’opportunités.",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Votre nom",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Votre adresse email",
+    "phoneLabel": "Numéro de téléphone",
+    "phonePlaceholder": "Votre numéro",
+    "messageLabel": "Message",
+    "messagePlaceholder": "N’hésitez pas à m’envoyer un message et je vous répondrai dès que possible.",
+    "success": "Merci, votre message a été envoyé avec succès.",
+    "send": "Envoyer le message",
+    "nameError": "Le nom doit contenir au moins 3 caractères.",
+    "emailError": "Veuillez entrer une adresse email valide.",
+    "phoneError": "Le numéro de téléphone est requis (chiffres uniquement)."
+  },
+  "footer": {
+    "heads": {
+      "follow": "Suivez-moi",
+      "sections": "Sections",
+      "cv": "CV"
+    },
+    "links": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "githup": "GitHub",
+      "whatsapp": "WhatsApp",
+      "home": "Accueil",
+      "about": "À propos",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "contact": "Contact",
+      "downloadcv": "Télécharger CV",
+      "viewcv": "Voir le CV",
+      "copy": "© 2025 Omar Elbastawesy. Tous droits réservés."
+    }
+  }
+}

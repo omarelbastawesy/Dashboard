@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ===== Brand ===== */
+  --color-primary: #0096d1;
+  --color-primary-hover: #0082b4;
+  --color-primary-soft: rgba(0, 150, 209, 0.1);
+
+  /* ===== Backgrounds ===== */
+  --bg-main: #f5f7fa;
+  --bg-sidebar: #ffffff;
+  --bg-card: #fcfcfc;
+
+  /* ===== Text ===== */
+  --text-primary: #1f2933;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-inverse: #ffffff;
+
+  /* ===== Border & Divider ===== */
+  --border-color: #e5e7eb;
+  --divider-color: #f0f2f5;
+
+  /* ===== Status ===== */
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --error: #dc2626;
+  --info: #0284c7;
+
+  /* ===== Shadow ===== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+  /* ===== Brand ===== */
+  --color-primary: #0096d1;
+  --color-primary-hover: #00a8eb;
+  --color-primary-soft: rgba(0, 150, 209, 0.15);
+
+  /* ===== Backgrounds ===== */
+  --bg-main: #0f172a;
+  --bg-sidebar: #020617;
+  --bg-card: #020617;
+  --bg-navbar: #020617;
+
+  /* ===== Text ===== */
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-inverse: #020617;
+
+  /* ===== Border & Divider ===== */
+  --border-color: #1e293b;
+  --divider-color: #1e293b;
+
+  /* ===== Status ===== */
+  --success: #22c55e;
+  --warning: #fbbf24;
+  --error: #ef4444;
+  --info: #38bdf8;
+
+  /* ===== Shadow ===== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-main);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
 }

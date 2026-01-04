@@ -1,0 +1,109 @@
+{
+  "header": {
+    "about": "About Me",
+    "skill": "Skills",
+    "project": "Projects",
+    "contact": "Contact"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Omar Elbastawsy",
+    "title": "Frontend Web Developer",
+    "dis": "Frontend Developer specializing in React.js and Next.js, building modern, responsive, and user-friendly web applications.",
+    "dcv": "Download CV",
+    "vcv": "View CV"
+  },
+  "about": {
+    "head": "I am the man who you are seeking to him.",
+    "summary": {
+      "header": "Summary",
+      "info": "Frontend Web Developer skilled in building modern, responsive, and user-friendly web applications. Proficient in HTML5, CSS3, JavaScript (ES6+), and React.js, with strong expertise in styling tools such as Sass, Bootstrap, and Styled Components. Adept at turning UI/UX designs into clean, optimized, and reusable components while ensuring high performance across all devices. Passionate about creating seamless user experiences, writing clean and maintainable code, and continuously learning new technologies to stay aligned with industry trends."
+    },
+    "experiance": {
+      "header": "Experience",
+      "stepA": {
+        "name": "Web Development Challenger",
+        "date": "'01/05/2022'",
+        "dis": "👉 A foundational program covering HTML, CSS, JavaScript, and Git, focused on building responsive and interactive web projects."
+      },
+      "stepB": {
+        "name": "Responsive Web Design",
+        "date": "'23/06/2022'",
+        "dis": "👉 A FreeCodeCamp course that teaches how to build responsive websites using HTML, CSS, Flexbox, and media queries for all screen sizes."
+      },
+      "stepC": {
+        "name": "Learn PHP for beginners",
+        "date": "'04/07/2023'",
+        "dis": "👉 An introductory Udemy course that teaches you how to build dynamic web applications with PHP from scratch by covering core PHP concepts and programming fundamentals."
+      },
+      "stepD": {
+        "name": "JavaScript Algorithms",
+        "date": "'16/08/2023'",
+        "dis": "👉 A comprehensive FreeCodeCamp course that teaches core JavaScript concepts through practical algorithms and data structure challenges."
+      }
+    },
+    "overview": {
+      "name": "Overview",
+      "cardA": {
+        "value": "20",
+        "name": "Projects"
+      },
+      "cardB": {
+        "value": "4",
+        "name": "😊 Clients"
+      },
+      "cardC": {
+        "value": "10",
+        "name": "Techs"
+      },
+      "cardD": {
+        "value": "5",
+        "name": "Jobs"
+      }
+    }
+  },
+  "contact": {
+    "head": "I’m always open to discussing new projects, creative ideas, or opportunities.",
+    "nameLabel": "Name",
+    "namePlaceholder": "You Name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Your Email Address",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Your Number",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Feel free to send me a meassage and I'll get back you as soon as possible.",
+    "success": "thanks, Your message have send successfully.",
+    "send": "Send Message",
+    "nameError": "Name must be at least 3 characters.",
+    "emailError": "Please enter a valid email address.",
+    "phoneError": "Phone number is required (numbers only)."
+  },
+  "footer": {
+    "heads": {
+      "follow": "Follow Me",
+      "sections": "Sections",
+      "cv": "CV"
+    },
+    "links": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "githup": "GitHub",
+      "whatsapp": "WhatsApp",
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact",
+      "downloadcv": "Download CV",
+      "viewcv": "View CV",
+      "copy": "© 2025 Omar Elbastawesy. All rights reserved."
+    }
+  }
+}

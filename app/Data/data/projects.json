@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "type": "react",
+    "name": "Countries",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor.",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Défi Frontend Mentor."
+    },
+    "bg": "/Image/countries.png",
+    "live": "https://omarelbastawesy.github.io/countries/",
+    "repo": "https://github.com/omarelbastawesy/countries"
+  },
+  {
+    "id": 2,
+    "type": "js",
+    "name": "Fack App",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor.",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Défi Frontend Mentor."
+    },
+    "bg": "/Image/fack-app.png",
+    "live": "https://omarelbastawesy.github.io/Fack-APP/",
+    "repo": "https://github.com/omarelbastawesy/Fack-APP"
+  },
+  {
+    "id": 3,
+    "type": "js",
+    "name": "RockPaperScissors",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor.",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Défi Frontend Mentor."
+    },
+    "bg": "/Image/RockPaperScissors.png",
+    "live": "https://omarelbastawesy.github.io/RockPaperScissors/",
+    "repo": "https://github.com/omarelbastawesy/RockPaperScissors"
+  },
+  {
+    "id": 4,
+    "type": "js",
+    "name": "Fetch-API",
+    "dis": {
+      "ar": "تطبيق ويب يقوم بجلب الـ Repos بواسطة اسم المستخدم.",
+      "en": "This is a App get data Github repos by Username.",
+      "fr": "Récupération des repos GitHub."
+    },
+    "bg": "/Image/fetch-api.png",
+    "live": "https://omarelbastawesy.github.io/Fetch-API/",
+    "repo": "https://github.com/omarelbastawesy/Fetch-API"
+  },
+  {
+    "id": 5,
+    "type": "react",
+    "name": "Countdown",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor.",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Défi Frontend Mentor."
+    },
+    "bg": "/Image/countdown.png",
+    "live": "https://omarelbastawesy.github.io/countdown/",
+    "repo": "https://github.com/omarelbastawesy/countdown"
+  },
+  {
+    "id": 6,
+    "type": "js",
+    "name": "Elbastawesy2",
+    "dis": {
+      "ar": "مشروع لصنع موقعى الشخصي Elabstawesy2.",
+      "en": "It was challange to make website for me.",
+      "fr": "Mon site personnel."
+    },
+    "bg": "/Image/Elbastawesy2.png",
+    "live": "https://omarelbastawesy.github.io/Elbastawesy2/",
+    "repo": "https://github.com/omarelbastawesy/Elbastawesy2"
+  },
+  {
+    "id": 7,
+    "type": "html",
+    "name": "Form",
+    "dis": {
+      "ar": "كان اختبار فى أح كورسات FreeCodeCamp.",
+      "en": "It was task on coure from FreeCodeCamp.",
+      "fr": "Exercice FreeCodeCamp."
+    },
+    "bg": "/Image/form-freecodecamp.png",
+    "live": "https://omarelbastawesy.github.io/Form-Freecodecamp/",
+    "repo": "https://github.com/omarelbastawesy/Form-Freecodecamp"
+  },
+  {
+    "id": 8,
+    "type": "js",
+    "name": "Memory-game",
+    "dis": {
+      "ar": "كان مشروع عملت عليه مع قناة Elzero Web School.",
+      "en": "It was project work on it with Elzero Web School.",
+      "fr": "Projet Elzero Web School."
+    },
+    "bg": "/Image/memory-game.png",
+    "live": "https://omarelbastawesy.github.io/Memory-game/",
+    "repo": "https://github.com/omarelbastawesy/Memory-game"
+  },
+  {
+    "id": 9,
+    "type": "react",
+    "name": "Movies-React",
+    "dis": {
+      "ar": "كان مشروع React لكورس FreeCodeCamp على Youtube.",
+      "en": "It was project on youtube from FreeCodeCamp.",
+      "fr": "Projet React FreeCodeCamp."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/174334966-3cca7172-96d4-4781-a864-1fa686b94530.png",
+    "live": "https://omarelbastawesy.github.io/movies-react/",
+    "repo": "https://github.com/omarelbastawesy/movies-react"
+  },
+  {
+    "id": 10,
+    "type": "html",
+    "name": "FullyLandingPage",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor.",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Landing page Frontend Mentor."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/174333467-b35d5e3f-ebe2-44a0-b136-3256ef6514db.jpg",
+    "live": "https://omarelbastawesy.github.io/FullyLandingPage/",
+    "repo": "https://github.com/omarelbastawesy/FullyLandingPage"
+  },
+  {
+    "id": 11,
+    "type": "js",
+    "name": "Elbastawesy-V1.1",
+    "dis": {
+      "ar": "مشروع لصنع موقعى الشخصي Elabstawesy1.",
+      "en": "It was challange to make website for me.",
+      "fr": "Site personnel v1."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160262683-854b8407-a9c3-4b12-91f3-c1ebd3b536a9.png",
+    "live": "https://omarelbastawesy.github.io/Elbastawesy-V1.1",
+    "repo": "https://github.com/omarelbastawesy/Elbastawesy-V1.1"
+  },
+  {
+    "id": 12,
+    "type": "js",
+    "name": "TimeTracking",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor.",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Time tracking app."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160262403-21f27e29-01ed-4ada-bb9e-20cfddc55fa7.jpg",
+    "live": "https://omarelbastawesy.github.io/TimeTracking",
+    "repo": "https://github.com/omarelbastawesy/TimeTracking"
+  },
+  {
+    "id": 13,
+    "type": "html",
+    "name": "Leon",
+    "dis": {
+      "ar": "كان مشروع عملت عليه مع قناة Elzero Web School.",
+      "en": "It was project work on it with Elzero Web School.",
+      "fr": "Template Elzero."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160262205-2d695487-446f-4ecd-8919-984e02ca0479.png",
+    "live": "https://omarelbastawesy.github.io/Leon",
+    "repo": "https://github.com/omarelbastawesy/Leon"
+  },
+  {
+    "id": 14,
+    "type": "html",
+    "name": "Kasper",
+    "dis": {
+      "ar": "كان مشروع عملت عليه مع قناة Elzero Web School.",
+      "en": "It was project work on it with Elzero Web School.",
+      "fr": "Template Kasper."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160254960-3b311e92-1c7d-4e56-a540-e2e05ce247d4.png",
+    "live": "https://omarelbastawesy.github.io/Kasper",
+    "repo": "https://github.com/omarelbastawesy/Kasper"
+  },
+  {
+    "id": 15,
+    "type": "html",
+    "name": "Huddle",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Landing page Huddle."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160254164-82d16a53-ffc9-42b5-90e6-946d7c60e22a.jpg",
+    "live": "https://omarelbastawesy.github.io/LandingPage",
+    "repo": "https://github.com/omarelbastawesy/LandingPage"
+  },
+  {
+    "id": 16,
+    "type": "html",
+    "name": "BondiTemplate",
+    "dis": {
+      "ar": "كان مشروع عملت عليه مع قناة Elzero Web School.",
+      "en": "It was project work on it with Elzero Web School.",
+      "fr": "Template Bondi."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160252366-bf74412b-dc43-472c-8cf7-7c5e53314c12.png",
+    "live": "https://omarelbastawesy.github.io/BondiTemplate",
+    "repo": "https://github.com/omarelbastawesy/BondiTemplate"
+  },
+  {
+    "id": 17,
+    "type": "html",
+    "name": "AnimeChanel",
+    "dis": {
+      "ar": "كان مشروع تدريبى من نسج خيالي بالكامل.",
+      "en": "It was project free style from my mind.",
+      "fr": "Projet personnel."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160249887-e71db960-1b30-4209-ba42-2e6715c0d2b0.png",
+    "live": "https://omarelbastawesy.github.io/AnimeChanel",
+    "repo": "https://github.com/omarelbastawesy/AnimeChanel"
+  },
+  {
+    "id": 18,
+    "type": "html",
+    "name": "ChatApp",
+    "dis": {
+      "ar": "كان تحدي موجود على Frontend Mentor",
+      "en": "It was challange on Frontend Mentor.",
+      "fr": "Chat app Frontend Mentor."
+    },
+    "bg": "https://user-images.githubusercontent.com/102428312/160253903-5b9a713a-ec19-4256-aa02-6844e84db9a5.jpg",
+    "live": "https://omarelbastawesy.github.io/ChatApp",
+    "repo": "https://github.com/omarelbastawesy/ChatApp"
+  }
+]
