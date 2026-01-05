@@ -1,6 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
-export default function Alert({ alert, setAlert, onSwitch, x, icon, color, title, message, buttonText }) {
+export default function Alert({
+  alert,
+  setAlert,
+  onSwitch,
+  x,
+  icon,
+  color,
+  title,
+  message,
+  buttonText,
+}) {
   return (
     <div
       className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
@@ -14,7 +25,7 @@ export default function Alert({ alert, setAlert, onSwitch, x, icon, color, title
           onClick={() => setAlert(false)}
           className="absolute right-4 top-4 text-(--text-muted) hover:text-(--text-primary) transition-colors"
         >
-          <FontAwesomeIcon icon={x} />
+          {x === true ? <FontAwesomeIcon icon={faX} /> : ""}
         </button>
 
         <div className="text-center">
@@ -27,9 +38,7 @@ export default function Alert({ alert, setAlert, onSwitch, x, icon, color, title
           <h3 className="mb-2 text-lg font-bold text-(--text-primary)">
             {title}
           </h3>
-          <p className="mb-6 text-sm text-(--text-secondary)">
-            {message}
-          </p>
+          <p className="mb-6 text-sm text-(--text-secondary)">{message}</p>
           <button
             onClick={() => onSwitch()}
             className="w-full !mt-4 rounded-lg bg-(--color-primary) px-4 py-2.5 text-sm font-semibold text-(--text-inverse) shadow-sm hover:bg-(--color-primary-hover) transition-colors active:scale-[0.98]"

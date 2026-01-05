@@ -6,7 +6,7 @@ import {
   faX,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import Alert from "../Alert/Alert";
+import Alert from "../components/Alert/Alert";
 import { useForm } from "react-hook-form";
 
 export default function Login({ onSwitch }) {
@@ -44,7 +44,7 @@ export default function Login({ onSwitch }) {
         alert={alert}
         setAlert={setAlert}
         onSwitch={onSwitch}
-        x={faX}
+        x={true}
         icon={faX}
         color="text-red-500"
         title="Authentication Error"
@@ -56,7 +56,7 @@ export default function Login({ onSwitch }) {
         alert={success}
         setAlert={setSuccess}
         onSwitch={onSwitch}
-        x={faX}
+        x={false}
         icon={faCheck}
         color="text-green-500"
         title="Authentication Success"

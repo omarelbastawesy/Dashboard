@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
-import Alert from "../Alert/Alert";
+import Alert from "../components/Alert/Alert";
 import { faCheck, faX } from "@fortawesome/free-solid-svg-icons";
 
 export default function Signup({ onSwitch }) {
@@ -40,7 +40,7 @@ export default function Signup({ onSwitch }) {
         alert={alert}
         setAlert={setAlert}
         onSwitch={setAlert}
-        x={faX}
+        x={true}
         icon={faX}
         color="text-red-500"
         title="Error"
@@ -52,8 +52,8 @@ export default function Signup({ onSwitch }) {
         alert={success}
         setAlert={setSuccess}
         onSwitch={() => window.location.reload()}
-        x={faX}
         icon={faCheck}
+        x={false}
         color="text-green-500"
         title="Success"
         message="You Logged In Successfully"
