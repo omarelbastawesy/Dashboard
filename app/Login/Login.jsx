@@ -26,14 +26,9 @@ export default function Login({ onSwitch }) {
     const info = localStorage.getItem("data");
     if (info && data.email === JSON.parse(info).email) {
       setAlert(true);
-      console.log(data.email);
-      console.log(JSON.parse(info).email);
     } else {
       localStorage.setItem("data", JSON.stringify(data));
-      console.log(data.email);
-      console.log(JSON.parse(info).email);
       setSuccess(true);
-      // onSwitch();
     }
   };
 

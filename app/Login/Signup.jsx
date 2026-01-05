@@ -26,7 +26,6 @@ export default function Signup({ onSwitch }) {
       data.password === userData.password
     ) {
       localStorage.setItem("login", true);
-      console.log(data);
       setSuccess(true);
     } else {
       setAlert(true);
