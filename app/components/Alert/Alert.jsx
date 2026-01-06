@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Alert({
   alert,
@@ -11,6 +12,7 @@ export default function Alert({
   title,
   message,
   buttonText,
+  link,
 }) {
   return (
     <div
@@ -28,7 +30,7 @@ export default function Alert({
           {x === true ? <FontAwesomeIcon icon={faX} /> : ""}
         </button>
 
-        <div className="text-center">
+        <div className="flex flex-col items-center justify-between gap-2">
           <div className={`mb-4 ${color}`}>
             <FontAwesomeIcon
               icon={icon}
@@ -39,12 +41,13 @@ export default function Alert({
             {title}
           </h3>
           <p className="mb-6 text-sm text-(--text-secondary)">{message}</p>
-          <button
+          <Link
+            href={link}
             onClick={() => onSwitch()}
-            className="w-full !mt-4 rounded-lg bg-(--color-primary) px-4 py-2.5 text-sm font-semibold text-(--text-inverse) shadow-sm hover:bg-(--color-primary-hover) transition-colors active:scale-[0.98]"
+            className="w-fit rounded-lg bg-(--color-primary) px-6 py-2.5 text-sm font-semibold text-(--text-inverse) shadow-sm hover:bg-(--color-primary-hover) transition-colors active:scale-[0.98]"
           >
             {buttonText}
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
-import Alert from "../components/Alert/Alert";
+import Alert from "../../components/Alert/Alert";
 import { faCheck, faX } from "@fortawesome/free-solid-svg-icons";
 
 export default function Signup({ onSwitch }) {
@@ -45,20 +45,22 @@ export default function Signup({ onSwitch }) {
         title="Error"
         message="Your email or password is incorrect."
         buttonText="Try Again"
+        link="/login"
       />
 
       <Alert
         alert={success}
         setAlert={setSuccess}
-        onSwitch={() => window.location.reload()}
+        onSwitch={setSuccess}
         icon={faCheck}
         x={false}
         color="text-green-500"
         title="Success"
         message="You Logged In Successfully"
         buttonText="Dashboard"
+        link="/dashboard"
       />
-      <div className="flex flex-col items-center justify-between gap-6 container w-full max-w-md bg-[var(--bg-card)] rounded-xl shadow-[var(--shadow-md)] p-8 border border-[var(--border-color)] animate-fade-in">
+      <div className="flex flex-col items-center justify-between gap-6 container w-full max-w-md bg-[var(--bg-card)] rounded-xl shadow-[var(--shadow-md)] p-8 border border-[var(--border-color)] animate-[fadeIn_0.4s_ease-out_forwards]">
         <div className="heading text-2xl font-bold text-[var(--text-primary)] mb-6 text-center">
           Sign Up
         </div>

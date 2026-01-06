@@ -6,7 +6,7 @@ import {
   faX,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import Alert from "../components/Alert/Alert";
+import Alert from "../../components/Alert/Alert";
 import { useForm } from "react-hook-form";
 
 export default function Login({ onSwitch }) {
@@ -45,6 +45,7 @@ export default function Login({ onSwitch }) {
         title="Authentication Error"
         message="User already exists or invalid credentials."
         buttonText="Sign Up"
+        link="/login"
       />
 
       <Alert
@@ -57,9 +58,10 @@ export default function Login({ onSwitch }) {
         title="Authentication Success"
         message="User registered successfully."
         buttonText="Sign Up"
+        link="/login"
       />
 
-      <div className="flex flex-col items-center justify-between gap-6 container w-full  bg-[var(--bg-card)] rounded-xl shadow-[var(--shadow-md)] p-8 border border-[var(--border-color)] animate-fade-in">
+      <div className="flex flex-col items-center justify-between gap-6 container w-full  bg-[var(--bg-card)] rounded-xl shadow-[var(--shadow-md)] p-8 border border-[var(--border-color)] animate-[fadeIn_0.4s_ease-out_forwards]">
         <div className="heading text-2xl font-bold text-[var(--text-primary)] mb-6 text-center">
           Sign In
         </div>
