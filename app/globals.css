@@ -83,6 +83,7 @@ input[type="number"]::-webkit-outer-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 /* ===== Animations ===== */
@@ -162,4 +163,65 @@ input[type="number"] {
   100% {
     clip-path: inset(0 0 0 100%);
   }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+@keyframes grid-flow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes pulse-line {
+  0%,
+  100% {
+    opacity: 0.1;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    opacity: 0.3;
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg) translateY(-50%);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-50%);
+  }
+}
+
+:root {
+  --color-primary-rgb: 0, 150, 209;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+[data-theme="dark"] {
+  --color-primary-rgb: 0, 150, 209;
 }

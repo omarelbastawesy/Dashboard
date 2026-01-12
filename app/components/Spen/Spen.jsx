@@ -1,83 +1,59 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRocket, faCompass } from "@fortawesome/free-solid-svg-icons";
+
 export default function Spen({ alert = false }) {
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+      className={`fixed inset-0 z-9999 flex items-center justify-center transition-all duration-700 ${
         alert
           ? "opacity-100 visible"
           : "opacity-0 invisible pointer-events-none"
       }`}
     >
-      <div className="flex items-center justify-center p-8 fixed z-10 ">
-        <div
-          id="wifi-loader"
-          className="w-16 h-16 rounded-[50px] relative flex items-center justify-center"
-        >
-          <svg
-            className="absolute w-[86px] h-[86px] flex items-center justify-center"
-            viewBox="0 0 86 86"
-          >
-            <circle
-              className="absolute [stroke-linejoin:round] [stroke-linecap:round] fill-none rounded-full stroke-[6px] stroke-linecap-round stroke-linejoin-round -rotate-[100deg] origin-center stroke-(--border-color) [stroke-dasharray:62.75_188.25] animate-[circle-outer_1.8s_ease_infinite_0.3s]"
-              cx="43"
-              cy="43"
-              r="40"
-            />
-            <circle
-              className="absolute [stroke-linejoin:round] [stroke-linecap:round] fill-none rounded-full stroke-[6px] stroke-linecap-round stroke-linejoin-round -rotate-[100deg] origin-center stroke-(--color-primary) [stroke-dasharray:62.75_188.25] animate-[circle-outer_1.8s_ease_infinite_0.15s]"
-              cx="43"
-              cy="43"
-              r="40"
-            />
-            <circle
-              className="absolute [stroke-linejoin:round] [stroke-linecap:round] fill-none rounded-full stroke-[6px] stroke-linecap-round stroke-linejoin-round -rotate-[100deg] origin-center stroke-(--color-primary) opacity-0 [stroke-dasharray:62.75_188.25]"
-              cx="43"
-              cy="43"
-              r="40"
-            />
-          </svg>
+      {/* Premium Backdrop with Shifting Mesh Gradient */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-2xl transition-opacity duration-1000" />
 
-          <svg
-            className="absolute w-[60px] h-[60px] flex items-center justify-center"
-            viewBox="0 0 60 60"
-          >
-            <circle
-              className="absolute [stroke-linejoin:round] [stroke-linecap:round] fill-none rounded-full stroke-[6px] stroke-linecap-round stroke-linejoin-round -rotate-[100deg] origin-center stroke-(--border-color) [stroke-dasharray:42.5_127.5] animate-[circle-middle_1.8s_ease_infinite_0.25s]"
-              cx="30"
-              cy="30"
-              r="27"
-            />
-            <circle
-              className="absolute [stroke-linejoin:round] [stroke-linecap:round] fill-none rounded-full stroke-[6px] stroke-linecap-round stroke-linejoin-round -rotate-[100deg] origin-center stroke-(--color-primary) [stroke-dasharray:42.5_127.5] animate-[circle-middle_1.8s_ease_infinite_0.1s]"
-              cx="30"
-              cy="30"
-              r="27"
-            />
-          </svg>
+      {/* Mesh Gradient Overlay */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+        <div className="absolute -top-[20%] -left-[20%] w-[80%] h-[80%] bg-(--color-primary) rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute -bottom-[20%] -right-[20%] w-[80%] h-[80%] bg-indigo-600 rounded-full blur-[150px] animate-pulse [animation-delay:2s]" />
+      </div>
 
-          <svg
-            className="absolute w-[34px] h-[34px] flex items-center justify-center"
-            viewBox="0 0 34 34"
-          >
-            <circle
-              className="absolute [stroke-linejoin:round] [stroke-linecap:round] fill-none rounded-full stroke-[6px] stroke-linecap-round stroke-linejoin-round -rotate-[100deg] origin-center stroke-(--border-color) [stroke-dasharray:22_66] animate-[circle-inner_1.8s_ease_infinite_0.2s]"
-              cx="17"
-              cy="17"
-              r="14"
-            />
-            <circle
-              className="absolute [stroke-linejoin:round] [stroke-linecap:round] fill-none rounded-full stroke-[6px] stroke-linecap-round stroke-linejoin-round -rotate-[100deg] origin-center stroke-(--color-primary) [stroke-dasharray:22_66] animate-[circle-inner_1.8s_ease_infinite_0.05s]"
-              cx="17"
-              cy="17"
-              r="14"
-            />
-          </svg>
+      <div className="relative flex flex-col items-center justify-center gap-12 group">
+        {/* The Quantum Core */}
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center perspective-[1000px]">
+          {/* Outer Orbital Ring */}
+          <div className="absolute inset-0 rounded-full border-2 border-dashed border-(--color-primary)/20 animate-[spin_10s_linear_infinite]" />
+          <div className="absolute inset-0 rounded-full border-t-2 border-b-2 border-(--color-primary)/40 animate-[spin_3s_linear_infinite]" />
 
-          <div
-            className="absolute -bottom-10 flex items-center justify-center lowercase font-bold text-sm tracking-[0.2px] 
-            before:content-[attr(data-text)] before:text-(--text-secondary)
-            after:content-[attr(data-text)] after:text-(--color-primary) after:animate-[wifi-text_3.6s_ease_infinite] after:absolute after:left-0"
-            data-text="Loading..."
-          />
+          {/* Middle Glowing Ring */}
+          <div className="absolute inset-[15%] rounded-full bg-(--color-primary-soft) border border-white/10 backdrop-blur-md shadow-[0_0_30px_rgba(var(--color-primary-rgb),0.3)] animate-[spin_5s_linear_infinite_reverse]" />
+
+          {/* Central Pulsing Icon */}
+          <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center shadow-2xl animate-bounce">
+            <div className="absolute inset-0 bg-(--color-primary) opacity-20 rounded-2xl animate-pulse" />
+            <FontAwesomeIcon
+              icon={faRocket}
+              className="text-3xl sm:text-4xl text-(--color-primary) drop-shadow-[0_0_15px_var(--color-primary)]"
+            />
+          </div>
+
+          {/* Particle Effects (Simplified) */}
+          <div className="absolute -top-4 left-1/2 w-1.5 h-1.5 bg-indigo-500 rounded-full shadow-[0_0_10px_#6366f1] animate-[spin_4s_linear_infinite] origin-[0_80px]" />
+          <div className="absolute -bottom-4 left-1/2 w-1.5 h-1.5 bg-(--color-primary) rounded-full shadow-[0_0_10px_var(--color-primary)] animate-[spin_6s_linear_infinite_reverse] origin-[0_-80px]" />
+        </div>
+
+        {/* Modern Loading Text */}
+        <div className="flex flex-col items-center gap-3">
+          <div className="text-xl sm:text-2xl font-black italic tracking-[0.3em] uppercase text-white drop-shadow-lg relative">
+            <span className="opacity-30">Loading</span>
+            <div className="absolute inset-0 overflow-hidden animate-[wifi-text_2s_ease_infinite]">
+              <span className="text-(--color-primary)">Loading</span>
+            </div>
+          </div>
+          <div className="h-1 w-32 bg-white/10 rounded-full overflow-hidden">
+            <div className="h-full bg-linear-to-r from-transparent via-(--color-primary) to-transparent w-full -translate-x-full animate-[shimmer_1.5s_infinite]" />
+          </div>
         </div>
       </div>
     </div>

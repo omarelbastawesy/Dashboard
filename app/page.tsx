@@ -1,13 +1,11 @@
-import Link from "next/link";
-import Spen from "./components/Spen/Spen";
+import Landing from "./components/Landing/Landing";
 
-export default async function Home() {
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--bg-main)]">
-      this is web app for dashboard
-      <Link href="/login">login</Link>
-      <Spen />
-    </div>
+    <>
+      <div style={{ position: "relative", zIndex: "10" }}>
+        <Landing />
+      </div>
+    </>
   );
 }
