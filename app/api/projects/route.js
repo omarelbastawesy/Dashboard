@@ -25,7 +25,7 @@ export async function POST(request) {
     if (projectExist) {
       return NextResponse.json(
         { message: "project already exist", success: false, field: "name" },
-        { status: 409 }
+        { status: 409 },
       );
     }
 
@@ -43,7 +43,7 @@ export async function POST(request) {
     ) {
       return NextResponse.json(
         { message: "all fields are required" },
-        { status: 422 }
+        { status: 422 },
       );
     }
 
@@ -63,7 +63,7 @@ export async function POST(request) {
 
     return NextResponse.json(
       { message: "project created successfully" },
-      { status: 201 }
+      { status: 201 },
     );
   } catch (err) {
     return NextResponse.json(
@@ -71,7 +71,7 @@ export async function POST(request) {
         message:
           "we cant create project right now server error from projects/route.ts",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -80,16 +80,22 @@ export async function GET() {
   try {
     await connectDB();
 
-    const projects = await Project.find();
+    const projects = await Project.find().lean();
 
-    return NextResponse.json({ projects }, { status: 200 });
+    // Convert _id to string for proper JSON serialization
+    const serializedProjects = projects.map((project) => ({
+      ...project,
+      _id: project._id.toString(),
+    }));
+
+    return NextResponse.json({ projects: serializedProjects }, { status: 200 });
   } catch (err) {
     return NextResponse.json(
       {
         message:
           "we cant get projects right now server error from projects/route.ts",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -105,13 +111,13 @@ export async function DELETE(request) {
     if (!project) {
       return NextResponse.json(
         { message: "project not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
     return NextResponse.json(
       { message: "project deleted successfully" },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (err) {
     return NextResponse.json(
@@ -119,7 +125,7 @@ export async function DELETE(request) {
         message:
           "we cant delete project right now server error from projects/route.ts",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
