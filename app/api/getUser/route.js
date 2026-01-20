@@ -11,14 +11,17 @@ export async function GET() {
     const emailCookie = cookieStore.get("email");
 
     if (!emailCookie) {
-      return NextResponse.json(null, { status: 401 });
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     const user = await User.findOne({ email: emailCookie.value });
+    if (!user) {
+      return NextResponse.json({ error: "User not found" }, { status: 404 });
+    }
 
-    return NextResponse.json(user);
+    return NextResponse.json(user, { status: 200 });
   } catch (error) {
-    console.error(error);
+    console.error("GetUser error:", error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
@@ -39,31 +42,34 @@ export async function PUT(req) {
     }
 
     const user = await User.findOne({ email });
-
     if (!user) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    user.name = name;
-    user.phone = phone;
-    user.jobTitle = jobTitle;
-    user.position = position;
-    user.location = location;
-    user.bio = bio;
-    user.avatar = avatar;
+    // ✅ تحديث البيانات
+    user.name = name || user.name;
+    user.phone = phone || user.phone;
+    user.jobTitle = jobTitle || user.jobTitle;
+    user.position = position || user.position;
+    user.location = location || user.location;
+    user.bio = bio || user.bio;
+    user.avatar = avatar || user.avatar;
 
     await user.save();
 
-    // ✅ لو محتاج تحدث الكوكي
-    const res = NextResponse.json(user);
-    res.cookies.set("email", email, {
+    // تحديث الكوكي إذا لزم
+    const res = NextResponse.json(user, { status: 200 });
+    res.cookies.set("email", user.email, {
       httpOnly: true,
       path: "/",
     });
 
     return res;
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("UpdateUser error:", error);
+    return NextResponse.json(
+      { error: "Server error during update" },
+      { status: 500 },
+    );
   }
 }
