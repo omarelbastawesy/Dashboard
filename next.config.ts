@@ -8,13 +8,6 @@ const nextConfig = {
       },
     ],
   },
-  // Netlify deployment configuration
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 };
 
 module.exports = nextConfig;
