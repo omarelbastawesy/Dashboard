@@ -7,7 +7,7 @@ export async function GET() {
   try {
     await connectDB();
 
-    const cookieStore = cookies(); // ✅ بدون await
+    const cookieStore = await cookies(); // ✅ بدون await
     const emailCookie = cookieStore.get("email");
 
     if (!emailCookie) {
@@ -34,7 +34,7 @@ export async function PUT(req) {
     const { name, email, phone, jobTitle, position, location, bio, avatar } =
       body;
 
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const emailCookie = cookieStore.get("email");
 
     if (!emailCookie || emailCookie.value !== email) {
