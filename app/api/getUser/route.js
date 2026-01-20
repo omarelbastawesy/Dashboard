@@ -1,41 +1,50 @@
 import User from "@/models/user";
 import connectDB from "@/lib/db";
 import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  await connectDB();
+  try {
+    await connectDB();
 
-  const cookieStore = await cookies();
+    const cookieStore = cookies(); // ✅ بدون await
+    const emailCookie = cookieStore.get("email");
 
-  const email = cookieStore.get("email")?.value;
+    if (!emailCookie) {
+      return NextResponse.json(null, { status: 401 });
+    }
 
-  const user = await User.findOne({ email });
-  console.log(user);
+    const user = await User.findOne({ email: emailCookie.value });
 
-  return Response.json(user);
+    return NextResponse.json(user);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
 }
 
 export async function PUT(req) {
   try {
-    const { name, email, phone, jobTitle, position, location, bio, avatar } =
-      await req.json();
-
     await connectDB();
 
-    const cookieStore = await cookies();
+    const body = await req.json();
+    const { name, email, phone, jobTitle, position, location, bio, avatar } =
+      body;
 
-    const cookiesEmail = cookieStore.get("email").value;
+    const cookieStore = cookies();
+    const emailCookie = cookieStore.get("email");
+
+    if (!emailCookie || emailCookie.value !== email) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
 
     const user = await User.findOne({ email });
 
-    if (!user || cookiesEmail !== email) {
-      return Response.json({ error: "User not found" }, { status: 404 });
+    if (!user) {
+      return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    cookieStore.set("email", email);
-
     user.name = name;
-    user.email = email;
     user.phone = phone;
     user.jobTitle = jobTitle;
     user.position = position;
@@ -45,8 +54,16 @@ export async function PUT(req) {
 
     await user.save();
 
-    return Response.json(user);
+    // ✅ لو محتاج تحدث الكوكي
+    const res = NextResponse.json(user);
+    res.cookies.set("email", email, {
+      httpOnly: true,
+      path: "/",
+    });
+
+    return res;
   } catch (error) {
-    return Response.json({ error: error.message }, { status: 500 });
+    console.error(error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
