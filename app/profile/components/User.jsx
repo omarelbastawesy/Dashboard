@@ -20,9 +20,9 @@ export default function User({ userData, isEditing, setUserData }) {
 
         <div className="relative mb-6 flex flex-col items-center">
           <div className="w-32 h-32 mx-auto bg-linear-to-br from-indigo-100 to-(--color-primary-soft) rounded-full flex items-center justify-center border-4 border-(--bg-card) shadow-xl relative overflow-hidden">
-            {userData.image ? (
+            {userData.avatar ? (
               <Image
-                src={userData.image}
+                src={userData.avatar}
                 alt="User"
                 width={100}
                 height={100}
@@ -48,8 +48,8 @@ export default function User({ userData, isEditing, setUserData }) {
               <input
                 type="text"
                 placeholder="Paste image URL..."
-                defaultValue={userData.image}
-                onChange={(e) => setUserData({ ...userData, image: e.target.value })}
+                defaultValue={userData.avatar}
+                onChange={(e) => setUserData({ ...userData, avatar: e.target.value })}
                 className="w-full px-4 py-2 rounded-xl bg-(--bg-main) border border-(--border-color) text-sm shadow-xl focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
                 autoFocus
               />
@@ -61,7 +61,7 @@ export default function User({ userData, isEditing, setUserData }) {
           {userData.name}
         </h2>
         <p className="text-(--text-primary) opacity-60 font-medium mb-6 uppercase tracking-wider text-xs">
-          {userData.role}
+          {userData.position}
         </p>
 
         <div className="flex justify-center gap-4 mb-6">

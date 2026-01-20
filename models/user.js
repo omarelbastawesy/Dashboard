@@ -6,6 +6,9 @@ const UserSchema = new mongoose.Schema({
   phone: { type: String, required: true },
   jobTitle: { type: String, required: true },
   position: { type: String, required: true, default: "employee" },
+  location: { type: String, required: false },
+  bio: { type: String, required: false },
+  avatar: { type: String, required: false },
   password: { type: String, required: true, minlength: 8 },
 });
 

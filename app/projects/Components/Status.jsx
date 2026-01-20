@@ -1,7 +1,9 @@
-
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faClock, faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheckCircle,
+  faClock,
+  faCircleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Status() {
   return (

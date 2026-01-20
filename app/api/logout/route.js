@@ -5,7 +5,6 @@ export async function POST() {
     { message: "Logout successful" },
     { status: 200 }
   );
-  response.cookies.delete("email");
   response.cookies.delete("login");
   console.log(response);
 

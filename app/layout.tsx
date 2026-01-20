@@ -1,6 +1,7 @@
 import "./globals.css";
 import ClientLayout from "./ClientLayout";
-import Background from "./components/Background/Background"
+import Background from "./components/Background/Background";
+import { UserProvider } from "./components/GetUser/UserPovider";
 
 export const metadata = {
   title: "Dashboard",
@@ -12,12 +13,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html lang="en">
       <body>
         <Background />
-        <ClientLayout>{children}</ClientLayout>
+        <ClientLayout>
+          <UserProvider>{children}</UserProvider>
+        </ClientLayout>
       </body>
     </html>
   );

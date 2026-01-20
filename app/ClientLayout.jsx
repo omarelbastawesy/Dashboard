@@ -9,6 +9,12 @@ export default function ClientLayout({ children }) {
   const pathname = usePathname();
   const [loading, setLoading] = useState(true);
 
+  // Initialize theme from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }, []);
+
   // 🔄 شغّل الـ spinner عند أي تغيير مسار
   useEffect(() => {
     setLoading(true);

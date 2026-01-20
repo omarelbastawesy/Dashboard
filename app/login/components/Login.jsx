@@ -182,7 +182,7 @@ export default function Login({ onSwitch }) {
               <input
                 className="input w-full pl-12 pr-6 py-4 rounded-full border border-[var(--color-primary)]/30 bg-white/5 text-(--text-primary) focus:outline-none focus:ring-2 focus:ring-(--color-primary)/20 focus:border-(--color-primary) transition-all duration-300 placeholder:text-(--text-muted)/40 font-medium"
                 type="text"
-                placeholder="Current Position"
+                placeholder="Job Title"
                 {...register("jobTitle", { required: "Required" })}
               />
               {errors.jobTitle && (

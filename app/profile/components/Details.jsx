@@ -29,7 +29,7 @@ export default function Details({ userData, isEditing, handleSave, setUserData }
                   Role
                 </span>
                 <span className="text-(--text-primary) font-semibold text-lg">
-                  {userData.role}
+                  {userData.jobTitle}
                 </span>
               </div>
               <div className="p-4 rounded-2xl bg-(--bg-main) border border-(--border-color)">
@@ -79,9 +79,9 @@ export default function Details({ userData, isEditing, handleSave, setUserData }
                 </label>
                 <input
                   type="text"
-                  value={userData.role}
+                  value={userData.jobTitle}
                   onChange={(e) =>
-                    setUserData({ ...userData, role: e.target.value })
+                    setUserData({ ...userData, jobTitle: e.target.value })
                   }
                   className="w-full px-5 py-3 rounded-xl bg-(--bg-main) border border-(--border-color) text-(--text-primary) focus:outline-none focus:ring-2 focus:ring-(--color-primary) transition-all font-medium"
                 />

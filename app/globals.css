@@ -5,6 +5,8 @@
   --color-primary: #0096d1;
   --color-primary-hover: #0082b4;
   --color-primary-soft: rgba(0, 150, 209, 0.1);
+  --sunny: rgb(255, 217, 0);
+  --moon: rgb(0, 159, 212);
 
   /* ===== Backgrounds ===== */
   --bg-main: #f5f7fa;

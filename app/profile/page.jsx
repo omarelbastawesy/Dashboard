@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useUser } from "../components/GetUser/UserPovider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -14,33 +15,43 @@ import User from "./components/User";
 import Details from "./components/Details";
 
 export default function Profile() {
+  const { user, loading } = useUser();
   const [isEditing, setIsEditing] = useState(false);
-  const [userData, setUserData] = useState({
-    name: "Omar Elbastawesy",
-    role: "Frontend Web Developer",
-    email: "omarelbastawesy1@gmail.com",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E03AQE7YgfyUq68fw/profile-displayphoto-crop_800_800/B4EZrLeD1vHMAM-/0/1764350256108?e=1769644800&v=beta&t=c05vB889_q3CQ8ZP6D-m4laOnJp81FRi5y5gaCSMBl4",
-    phone: "+201012345678",
-    location: "Kafr El Sheikh, Egypt",
-    bio: "Frontend Web Developer with 5 years of experience in building scalable web applications and intuitive user interfaces. Always learning and exploring new technologies.",
-  });
+  const [userData, setUserData] = useState({});
+
+  console.log(userData);
 
   useEffect(() => {
-    const data = localStorage.getItem("userData");
-    if (data) {
-      setUserData(JSON.parse(data));
-    } else {
-      localStorage.setItem("userData", JSON.stringify(userData));
-    }
+    fetch("/api/getUser")
+      .then((res) => res.json())
+      .then((data) => {
+        setUserData(data);
+      });
+
+    console.log(userData);
+
+    //   const data = localStorage.getItem("userData");
+    //   if (data) {
+    //     setUserData(JSON.parse(data));
+    //   } else {
+    //     localStorage.setItem("userData", JSON.stringify(userData));
+    //   }
   }, []);
 
   const handleSave = (e) => {
     e.preventDefault();
     setIsEditing(false);
     // Logic to save data would go here
-    localStorage.setItem("userData", JSON.stringify(userData));
+    fetch("/api/getUser", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
   };
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <Container>
@@ -66,7 +77,11 @@ export default function Profile() {
         </Header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <User userData={userData} isEditing={isEditing} setUserData={setUserData}/>
+          <User
+            userData={userData}
+            isEditing={isEditing}
+            setUserData={setUserData}
+          />
 
           <Details
             userData={userData}

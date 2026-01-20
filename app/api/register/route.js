@@ -9,8 +9,10 @@ export async function POST(request) {
 
     await connectDB();
 
-    const existUser = await User.findOne({ email });
+    const existUser = await User.findOne({ email: email.toLowerCase() });
     if (existUser) {
+
+      console.log("User already exist");
       return NextResponse.json(
         { message: "User already exist", success: false, field: "email" },
         { status: 400 }
@@ -18,10 +20,11 @@ export async function POST(request) {
     }
 
     const hashpassword = await bcrypt.hash(password, 10);
+    const emailLower = email.toLowerCase();
 
     const user = await new User({
       name,
-      email,
+      email: emailLower,
       phone,
       jobTitle,
       password: hashpassword,
