@@ -39,8 +39,7 @@ export async function POST(request) {
       !progress ||
       !description ||
       !status ||
-      !type ||
-      !priority
+      !type
     ) {
       return NextResponse.json(
         { message: "all fields are required" },
@@ -61,8 +60,6 @@ export async function POST(request) {
       status,
       type,
     });
-
-    project.save();
 
     return NextResponse.json(
       { message: "project created successfully" },

@@ -5,24 +5,32 @@ import bcrypt from "bcryptjs";
 
 export async function POST(request) {
   try {
-    const { name, email, phone, jobTitle, password } = await request.json();
-
     await connectDB();
 
-    const existUser = await User.findOne({ email: email.toLowerCase() });
-    if (existUser) {
+    const body = await request.json();
+    const { name, email, phone, jobTitle, password } = body;
 
-      console.log("User already exist");
+    // ✅ Validation
+    if (!name || !email || !password) {
       return NextResponse.json(
-        { message: "User already exist", success: false, field: "email" },
-        { status: 400 }
+        { message: "name, email and password are required" },
+        { status: 422 },
+      );
+    }
+
+    const emailLower = email.toLowerCase();
+
+    const existUser = await User.findOne({ email: emailLower });
+    if (existUser) {
+      return NextResponse.json(
+        { message: "User already exist", field: "email" },
+        { status: 409 },
       );
     }
 
     const hashpassword = await bcrypt.hash(password, 10);
-    const emailLower = email.toLowerCase();
 
-    const user = await new User({
+    await User.create({
       name,
       email: emailLower,
       phone,
@@ -30,19 +38,15 @@ export async function POST(request) {
       password: hashpassword,
     });
 
-    await user.save();
-
-    const response = NextResponse.json(
-      { message: "User registered successfully", success: true },
-      { status: 200 }
-    );
-
-    return response;
-  } catch (err) {
-    console.log(err);
     return NextResponse.json(
-      { error: "bad request with server", success: false },
-      { status: 500 }
+      { message: "User registered successfully", success: true },
+      { status: 201 },
+    );
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { error: "server error while registering user" },
+      { status: 500 },
     );
   }
 }
